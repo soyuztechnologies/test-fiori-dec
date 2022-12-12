@@ -4,6 +4,7 @@ sap.ui.define([
 	"sap/ui/Device"
 ], function(UIComponent,JSONModel,Device) {
     'use strict';
+    //sampel code change
     return UIComponent.extend("ey.fin.ar.Component",{
         metadata: {
             manifest: "json"

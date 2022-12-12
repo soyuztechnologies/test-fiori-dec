@@ -1,0 +1,30 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+xmlns:core="sap.ui.core"
+controllerName="ey.fin.ar.controller.View2">
+    <Page title="View 2" showNavButton="true" navButtonPress="onBack">
+        <content>
+            <ObjectHeader title="{NAME}" intro="{DESCRIPTION}" number="{PRICE}" numberUnit="{CURRENCY_CODE}"
+            icon="sap-icon://product"></ObjectHeader>
+            <IconTabBar>
+                <items>
+                    <IconTabFilter text="More Info" key="moreInfo" icon="sap-icon://warning">
+                        <core:Fragment fragmentName="ey.fin.ar.fragments.moreInfo" type="XML"></core:Fragment>
+                    </IconTabFilter>
+                    <IconTabFilter text="Supplier" key="supplier" icon="sap-icon://supplier">
+                        <core:Fragment fragmentName="ey.fin.ar.fragments.supplierTab" type="XML"></core:Fragment>
+                    </IconTabFilter>
+                    <IconTabFilter text="Cities" key="citi" icon="sap-icon://home">
+                        <core:Fragment fragmentName="ey.fin.ar.fragments.cities" type="XML"></core:Fragment>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Save" type="Accept" press="onSave"/>
+                <Button text="Cancel" type="Reject" press="onReject"/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>
